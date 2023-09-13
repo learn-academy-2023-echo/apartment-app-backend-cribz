@@ -49,9 +49,9 @@ RSpec.describe "Apartments", type: :request do
 
       post '/apartments', params: apartment_params
       expect(response).to have_http_status(200)
-      p response
+    
       apartment = Apartment.first
-      p apartment
+      
       expect(apartment.street).to eq "Hibbard Lane"
       expect(apartment.unit).to eq "20"
       expect(apartment.city).to eq "Colorado Springs"
